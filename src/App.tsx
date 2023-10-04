@@ -1,14 +1,24 @@
 import { useState } from 'react'
-import { Button, ButtonGroup } from '@chakra-ui/react'
+import { Button, ButtonGroup, Grid, GridItem } from '@chakra-ui/react'
 import reactLogo from './assets/react.svg'
 import './App.css'
+import NavBar from './components/NavBar'
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
     <div className="App">
-      <Button colorScheme="blue">Button</Button>
+      <Grid
+      templateAreas={{
+        base: `"nav" "main"`,
+        lg:`"nav nav" "aside main"`
+      }}
+      >
+        <GridItem area="nav" >
+          <NavBar />
+        </GridItem>
+      </Grid>
     </div>
   );
 }
