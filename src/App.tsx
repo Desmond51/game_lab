@@ -16,9 +16,11 @@ function App() {
           lg: `"nav nav" "aside main"`,
         }}
       >
+
         <GridItem area="nav">
           <NavBar />
         </GridItem>
+        // Games 
         <GridItem area="main">
           <GameGrid />
         </GridItem>
